@@ -36,7 +36,7 @@ public class GetMazePathWithJumps {
                 res.add("v"+(i+1)+s);
             }
         }
-        for(int i=0,j=0;i<=dr && j<=dc;i++,j++){
+        for(int i=0;i<=dr && i<=dc;i++){
             ArrayList<String> ifDiagonal=getMazePaths(sr+i+1,sc+i+1,dr,dc);
             for(String s: ifDiagonal){
                 res.add("d"+(i+1)+s);
