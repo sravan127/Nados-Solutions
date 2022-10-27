@@ -26,10 +26,18 @@ public class QueueToStackPopEfficient {
         }
     
         int pop() {
-           return mainQ.remove();
+            if(mainQ.size()==0){
+                System.out.println("Stack underflow");
+                return -1;
+            }
+            return mainQ.remove();
         }
     
         int top() {
+            if(mainQ.size()==0){
+                System.out.println("Stack underflow");
+                return -1;
+              }
           return mainQ.peek();
         }
       }
