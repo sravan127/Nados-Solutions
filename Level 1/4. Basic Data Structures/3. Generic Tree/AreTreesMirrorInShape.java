@@ -7,19 +7,6 @@ public class AreTreesMirrorInShape {
     ArrayList<Node> children = new ArrayList<>();
   }
 
-  public static void display(Node node) {
-    String str = node.data + " -> ";
-    for (Node child : node.children) {
-      str += child.data + ", ";
-    }
-    str += ".";
-    System.out.println(str);
-
-    for (Node child : node.children) {
-      display(child);
-    }
-  }
-
   public static Node construct(int[] arr) {
     Node root = null;
 
@@ -42,41 +29,6 @@ public class AreTreesMirrorInShape {
     }
 
     return root;
-  }
-
-  public static int size(Node node) {
-    int s = 0;
-
-    for (Node child : node.children) {
-      s += size(child);
-    }
-    s += 1;
-
-    return s;
-  }
-
-  public static int max(Node node) {
-    int m = Integer.MIN_VALUE;
-
-    for (Node child : node.children) {
-      int cm = max(child);
-      m = Math.max(m, cm);
-    }
-    m = Math.max(m, node.data);
-
-    return m;
-  }
-
-  public static int height(Node node) {
-    int h = -1;
-
-    for (Node child : node.children) {
-      int ch = height(child);
-      h = Math.max(h, ch);
-    }
-    h += 1;
-
-    return h;
   }
 
   public static boolean areMirror(Node n1, Node n2) {
