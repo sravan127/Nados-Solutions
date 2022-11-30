@@ -32,6 +32,8 @@ public class LargestNumber {
       
       t--;
     }
+
+    s.close();
   }
 
 }
