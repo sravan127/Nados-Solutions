@@ -22,6 +22,8 @@ public class HighestFrequencyCharacter {
             }
         }
         System.out.println(max);
+
+        s.close();
     }
 
 }
