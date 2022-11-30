@@ -35,5 +35,7 @@ public class PartitionAnArray {
         int pivot = scn.nextInt();
         partition(arr,pivot);
         print(arr);
+
+        scn.close();
       }
 }
