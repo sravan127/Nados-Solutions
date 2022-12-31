@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class IsGraphCyclic {
    static class Edge {
       int src;
       int nbr;
